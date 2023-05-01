@@ -1,5 +1,5 @@
 {
-  "name": "start_webpack",
+  "name": "projet_spa_webpack",
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --config webpack.config.js --watch",

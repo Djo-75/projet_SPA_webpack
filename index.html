@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./dist/bundle.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/bundle.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <title>Document</title>
-</head>
-<body>
+  </head>
+  
+  <body>
     <p>Bonjour les amis, je vous aime</p>
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
+    <a href="#">Home</a>
+    <a href="#pagelist">PageList</a>
+    <a href="#pagelist/borderlands">PageList borderlands</a>
+
+    <section id="pageContent">Choisissez un lien</section>
+
+    <script src="./src/Home.js"></script>
+    <script src="./src/PageList.js"></script>
+    <script src="./src/PageDetail.js"></script>
+    <script src="./src/routes.js"></script>
+    <script src="./src/index.js"></script>
+
     <script src="./dist/bundle.js"></script>
-</body>
+  </body>
 </html>
