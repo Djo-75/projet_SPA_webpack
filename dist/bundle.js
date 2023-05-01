@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style/index.scss */ \"./src/style/index.scss\");\n // Attention ici, il faut bien mettre l'extension `.scss`\n\n//# sourceURL=webpack://start_webpack/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style/index.scss */ \"./src/style/index.scss\");\n // Attention ici, il faut bien mettre l'extension `.scss`\n\nconsole.log(\"salut Mec\");\n\n//# sourceURL=webpack://start_webpack/./src/index.js?");
 
 /***/ }),
 

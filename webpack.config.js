@@ -86,4 +86,5 @@ module.exports = {
   // Pour le moment, nous avons besoin du mode "développement", car nous n'avons,
   // par exemple, pas besoin de minifier notre code.
   mode: 'development',
+  watch: true,
 };
