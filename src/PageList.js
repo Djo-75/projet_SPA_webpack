@@ -7,8 +7,13 @@ const PageList = (argument = '') => {
     const displayResults = (articles) => {
       const resultsContent = articles.map((article) => (
         `<article class="cardGame">
-          <h1>${article.name}</h1>
-          <h2>${article.released}</h2>
+          <h1>Nom ${article.name}</h1> 
+          <h2>Date sortie ${article.released}</h2> 
+          <p>Note ${article.rating}</p> 
+          <p>Plateforme ${article.platforms[0].platform.name}</p>
+          <p>${article.genres[0].name}</p> // Faire une boucle car plusieurs genres
+          <img src=${article.background_image}>
+
           <a href="#pagedetail/${article.id}">${article.id}</a>
         </article>`
       ));
@@ -34,6 +39,10 @@ const PageList = (argument = '') => {
         <div class="articles">Loading...</div>
       </section>
     `;
+    // Définir la grille CSS
+    pageContent.style.display = "grid";
+    pageContent.style.gridTemplateColumns = "repeat(3, 0.6fr)"; // fractionne l'espace disponible en 3
+    pageContent.style.gridGap = "20px";
 
     preparePage();
   };
