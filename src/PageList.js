@@ -6,14 +6,14 @@ const PageList = (argument = "") => {
       const resultsContent = articles.map(
         (article) =>
         `<article>
-        <div class="card" style="width: 18rem;">
-        <h2>${article.name}</h2> 
+        <div class="card"> 
           <img class="game-cover" src=${article.background_image} alt="jeu vidéo">
           <div class="card-body">
-            <p>Date sortie : ${article.released}</p> ok
+            <h2>${article.name}</h2>
+            <p>Date sortie : ${article.released}</p>
             <p>Note : ${article.rating}</p> 
             <p>Plateforme : ${article.platforms[0].platform.name}</p>
-            <p>Genre : ${article.genres[0].name}</p> 
+            <p>Genre : ${console.log(article)}</p> 
             <button class="btn btn-dark" onclick="location.href='#'">Accueil</button>
             <button class="btn btn-dark" onclick="location.href='#pagedetail/${article.id}'">En savoir +</button>
             </div>
@@ -44,7 +44,7 @@ const PageList = (argument = "") => {
     `;
     pageContent.style.display = "grid";
     pageContent.style.gridTemplateColumns = "repeat(3, 1fr)"; // fractionne l'espace disponible en 3
-    pageContent.style.gridGap = "20px";
+
 
     preparePage();
   };
