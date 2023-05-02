@@ -39,10 +39,10 @@ const PageList = (argument = '') => {
         <div class="articles">Loading...</div>
       </section>
     `;
-    // Définir la grille CSS
-    pageContent.style.display = "grid";
-    pageContent.style.gridTemplateColumns = "repeat(3, 0.6fr)"; // fractionne l'espace disponible en 3
-    pageContent.style.gridGap = "20px";
+    // // Définir la grille CSS
+    // pageContent.style.display = "grid";
+    // pageContent.style.gridTemplateColumns = "repeat(3, 0.6fr)"; // fractionne l'espace disponible en 3
+    // pageContent.style.gridGap = "20px";
 
     preparePage();
   };
