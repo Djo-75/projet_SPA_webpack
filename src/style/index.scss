@@ -1,13 +1,29 @@
-$color-red: rgb(255, 20, 20);
-
 p {
-    color: $color-red;
+    color: purple;
     font-family: 'Big Noodles';
 }
 
-body {
-    background-image: url('../assets/images/tron.jpg');
+.game-cover {
+    width: 100%;
+    height: auto;
 }
+
+.input-group {
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 30%;
+}
+
+.card {
+    padding: 10px
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+
 
 @font-face {
     font-family: 'Big Noodles';

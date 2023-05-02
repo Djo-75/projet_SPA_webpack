@@ -1,24 +1,27 @@
-const PageList = (argument = '') => {
-
-
+const PageList = (argument = "") => {
   const preparePage = () => {
-    const cleanedArgument = argument.trim().replace(/\s+/g, '-');
+    const cleanedArgument = argument.trim().replace(/\s+/g, "-");
 
     const displayResults = (articles) => {
-      const resultsContent = articles.map((article) => (
-        `<article class="cardGame">
-          <h1>Nom ${article.name}</h1> 
-          <h2>Date sortie ${article.released}</h2> 
-          <p>Note ${article.rating}</p> 
-          <p>Plateforme ${article.platforms[0].platform.name}</p>
-          <p>${article.genres[0].name}</p> // Faire une boucle car plusieurs genres
-          <img src=${article.background_image}>
-
-          <a href="#pagedetail/${article.id}">${article.id}</a>
+      const resultsContent = articles.map(
+        (article) =>
+        `<article>
+        <div class="card" style="width: 18rem;">
+        <h2>${article.name}</h2> 
+          <img class="game-cover" src=${article.background_image} class="card-img-top" alt="...">
+          <div class="card-body">
+            <p>Date sortie : ${article.released}</p> 
+            <p>Note : ${article.rating}</p> 
+            <p>Plateforme : ${article.platforms[0].platform.name}</p>
+            <p>Genre : ${article.genres[0].name}</p> 
+            <a href="#pagedetail/${article.id}">${article.id}</a>
+            </div>
+        </div>
         </article>`
-      ));
-      const resultsContainer = document.querySelector('.page-list .articles');
+      );
+      const resultsContainer = document.querySelector(".page-list .articles");
       resultsContainer.innerHTML = resultsContent.join("\n");
+      console.log(resultsContent.inner)
     };
 
     const fetchList = (url, argument) => {
@@ -26,7 +29,7 @@ const PageList = (argument = '') => {
       fetch(finalURL)
         .then((response) => response.json())
         .then((responseData) => {
-          displayResults(responseData.results)
+          displayResults(responseData.results);
         });
     };
 
@@ -36,13 +39,10 @@ const PageList = (argument = '') => {
   const render = () => {
     pageContent.innerHTML = `
       <section class="page-list">
-        <div class="articles">Loading...</div>
+        <div class="articles row">On cherche !
       </section>
     `;
-    // // Définir la grille CSS
-    // pageContent.style.display = "grid";
-    // pageContent.style.gridTemplateColumns = "repeat(3, 0.6fr)"; // fractionne l'espace disponible en 3
-    // pageContent.style.gridGap = "20px";
+
 
     preparePage();
   };

@@ -1,3 +1,5 @@
+import "./style/index.scss"
+
 const callRoute = () => {
     const { hash } = window.location;
     const pathParts = hash.substring(1).split('/');
@@ -13,3 +15,12 @@ const callRoute = () => {
   
   window.addEventListener('hashchange', () => callRoute());
   window.addEventListener('DOMContentLoaded', () => callRoute());
+
+const searchForm = document.getElementById("search-form");
+const searchInput = document.getElementById("search-input");
+
+searchForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const searchQuery = searchInput.value;
+  PageList(searchQuery)
+})
