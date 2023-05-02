@@ -12,27 +12,29 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <title>Document</title>
   </head>
-  
+
+  <form id="search-form">
+    <div class="input-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter the name of a game..."
+        id="search-input"
+      />
+      <button class="btn btn-secondary" type="submit" id="search-btn">
+        Search
+      </button>
+    </div>
+  </form>
+
   <body>
-
-<form id="search-form">
-  <div class="input-group">
-    <input type="text" class="form-control" placeholder="Enter the name of a game..." id="search-input" />
-    <button class="btn btn-secondary" type="submit" id="search-btn">
-      Search
-    </button>
-  </div>
-</form>
-
-<div class = "container">
-    <section id="pageContent"></section> 
-</div>
+    <div class="cardGame-container">
+      <section id="pageContent"></section>
+    </div>
 
     <a href="#">Home</a>
     <a href="#pagelist">PageList</a>
     <a href="#pagelist/borderlands">PageList borderlands</a>
-
-
 
     <script src="./src/Home.js"></script>
     <script src="./src/PageList.js"></script>

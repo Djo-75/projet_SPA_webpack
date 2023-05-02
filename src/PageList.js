@@ -8,20 +8,20 @@ const PageList = (argument = "") => {
         `<article>
         <div class="card" style="width: 18rem;">
         <h2>${article.name}</h2> 
-          <img class="game-cover" src=${article.background_image} class="card-img-top" alt="...">
+          <img class="game-cover" src=${article.background_image} alt="jeu vidéo">
           <div class="card-body">
-            <p>Date sortie : ${article.released}</p> 
+            <p>Date sortie : ${article.released}</p> ok
             <p>Note : ${article.rating}</p> 
             <p>Plateforme : ${article.platforms[0].platform.name}</p>
             <p>Genre : ${article.genres[0].name}</p> 
-            <a href="#pagedetail/${article.id}">${article.id}</a>
+            <button class="btn btn-dark" onclick="location.href='#'">Accueil</button>
+            <button class="btn btn-dark" onclick="location.href='#pagedetail/${article.id}'">En savoir +</button>
             </div>
         </div>
         </article>`
       );
-      const resultsContainer = document.querySelector(".page-list .articles");
+      const resultsContainer = document.querySelector("#pageContent");
       resultsContainer.innerHTML = resultsContent.join("\n");
-      console.log(resultsContent.inner)
     };
 
     const fetchList = (url, argument) => {
@@ -39,10 +39,12 @@ const PageList = (argument = "") => {
   const render = () => {
     pageContent.innerHTML = `
       <section class="page-list">
-        <div class="articles row">On cherche !
+        <div class="articles">On cherche !</div>
       </section>
     `;
-
+    pageContent.style.display = "grid";
+    pageContent.style.gridTemplateColumns = "repeat(3, 1fr)"; // fractionne l'espace disponible en 3
+    pageContent.style.gridGap = "20px";
 
     preparePage();
   };
