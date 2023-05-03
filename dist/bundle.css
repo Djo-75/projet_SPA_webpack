@@ -45,7 +45,6 @@ body {
   font-family: "Big Noodles";
   src: url(e2ebffa44fbb63381589.ttf);
 }
-/* PAGE CONTENT */
 #pageContent {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -53,4 +52,30 @@ body {
   margin-left: 100px;
   margin-right: 100px;
   gap: 20px;
+}
+
+a, a:visited {
+  text-decoration: none;
+  position: relative;
+  color: #069;
+}
+a:after, a:visited:after {
+  content: "";
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  background: #069;
+  transition: 0.2s;
+}
+a:hover:after, a:visited:hover:after {
+  width: 100%;
+}
+a.block, a:visited.block {
+  display: block;
+  padding: 0.5em;
+}
+a.block:hover, a:visited.block:hover {
+  background: #eee;
 }

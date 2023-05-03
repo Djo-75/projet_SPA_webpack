@@ -25,7 +25,6 @@ const PageDetail = (argument) => {
       articleDOM.querySelector("p.rating span").innerHTML = rating;
       articleDOM.querySelector(".background_image").src = background_image;
       articleDOM.querySelector("p.ratings_count span").innerHTML = ratings_count;
-      console.log(gameData.games)
   
       // Plateformes 
       const platformsHTML = platforms.map(gamePlatform =>
@@ -64,15 +63,13 @@ const PageDetail = (argument) => {
       articleDOM.querySelector("p.stores span").innerHTML = storesHTML;
     };
 
-    const fetchScreenshots = (url, argument) => {
-      fetch(`${url}/${argument}?key=${API_KEY}`)
-    }
-    
+
     const fetchGame = (url, argument) => {
       fetch(`${url}/${argument}?key=${API_KEY}`)
         .then((response) => response.json())
         .then((responseData) => {
-          displayGame(responseData);
+          displayGame(responseData)
+          console.log(responseData);
         });
     };
     
