@@ -9,7 +9,7 @@ const PageList = (argument = "") => {
         <div class="card"> 
           <img class="game-cover" src=${article.background_image} alt="jeu vidéo">
           <div class="card-body">
-            <h2>${article.name}</h2>
+            <h2>${article.name.substring(0, 20)}</h2>
             <p>Date sortie : ${article.released}</p>
             <p>Note : ${article.rating}</p> 
             <p>Plateforme : ${article.platforms[0].platform.name}</p>

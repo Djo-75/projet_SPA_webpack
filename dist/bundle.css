@@ -8,7 +8,7 @@ p {
 
 .game-cover {
   width: 100%;
-  height: auto;
+  height: 250px;
 }
 
 .input-group {
@@ -17,9 +17,18 @@ p {
   max-width: 30%;
 }
 
+body {
+  background-image: url(4ca58273c5794892717b.jpg);
+}
+
 .container {
   display: flex;
   justify-content: space-around;
+}
+
+.details {
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 @font-face {
