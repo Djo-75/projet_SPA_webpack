@@ -1,93 +1,91 @@
-$color-purple : purple;
-$color-beige : beige;
-
+$color-purple: purple;
+$color-beige: beige;
 
 p {
-    color: $color-purple;
-    font-family: 'Big Noodles';
+  color: $color-purple;
+  font-family: "Big Noodles";
 }
 
 .game-cover {
-    width: 100%;
-    height: 250px;
+  width: 100%;
+  height: 250px;
 }
 
 .game-cover-details {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .input-group {
-    margin: 0 auto;
-    padding: 30px;
-    max-width: 30%;
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 30%;
 }
 
-.article, .card-body {
-    background: $color-beige;
+.article,
+.card-body {
+  background: $color-beige;
 }
 
 body {
-    background-image: url('../assets/images/retro.jpg');
-    background-size: cover;
+  background-image: url("../assets/images/retro.jpg");
+  background-size: cover;
 }
 
-
-
 .container {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .details {
-    margin-left: 20%;
-    margin-right: 20%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
-
 @font-face {
-    font-family: 'Big Noodles';
-    src: url('../assets/fonts/big_noodle_titling.ttf');
+  font-family: "Big Noodles";
+  src: url("../assets/fonts/big_noodle_titling.ttf");
+}
+
+.card {
+    padding: 5px;
 }
 
 #pageContent {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
-    margin-left: 100px;
-    margin-right: 100px;
-    gap: 20px;
-  }
-
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+  gap: 20px;
+}
 
 a, a:visited {
-	text-decoration: none;
-	position: relative;
-	color: #069;
-	
-	&:after {
-		content: '';
-		height: 3px;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 0%;
-		background: #069;
-		transition: 0.2s;
-	}
+  text-decoration: none;
+  position: relative;
+  color: #069;
 
-	&:hover:after {
-		width: 100%;
-	}
-	
-	&.block {
-		display: block;
-		padding: 0.5em;
-		
-		&:hover {
-			background: #eee;
-		}
+  &:after {
+    content: "";
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background: #069;
+    transition: 0.2s;
+  }
 
+  &:hover:after {
+    width: 100%;
+  }
+
+  &.block {
+    display: block;
+    padding: 0.5em;
+
+    &:hover {
+      background: #eee;
     }
-  
-    }
+  }
+}

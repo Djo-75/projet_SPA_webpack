@@ -22,7 +22,8 @@ p {
   max-width: 30%;
 }
 
-.article, .card-body {
+.article,
+.card-body {
   background: beige;
 }
 
@@ -45,6 +46,10 @@ body {
   font-family: "Big Noodles";
   src: url(e2ebffa44fbb63381589.ttf);
 }
+.card {
+  padding: 5px;
+}
+
 #pageContent {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
