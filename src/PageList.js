@@ -41,10 +41,6 @@ const PageList = (argument = "") => {
         <div class="articles">On cherche !</div>
       </section>
     `;
-    pageContent.style.display = "grid";
-    pageContent.style.gridTemplateColumns = "repeat(3, 1fr)"; // fractionne l'espace disponible en 3
-
-
     preparePage();
   };
 

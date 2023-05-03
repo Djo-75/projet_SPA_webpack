@@ -25,7 +25,7 @@ const PageDetail = (argument) => {
       articleDOM.querySelector("p.rating span").innerHTML = rating;
       articleDOM.querySelector(".background_image").src = background_image;
       articleDOM.querySelector("p.ratings_count span").innerHTML = ratings_count;
-      console.log(gameData)
+      console.log(gameData.games)
   
       // Plateformes 
       const platformsHTML = platforms.map(gamePlatform =>
@@ -52,20 +52,21 @@ const PageDetail = (argument) => {
         articleDOM.querySelector("p.tags span").innerHTML = tagsHTML;
 
       // Site web
-      const websiteHTML = `<a href="${website}" target="_self">${website}</a>` //target_blank ouvre l'élément dans une nouvelle fenêtre, self dans la même
+      const websiteHTML = `<a href="${website}" target="_blank">${website}</a>` //target_blank ouvre l'élément dans une nouvelle fenêtre, self dans la même
       articleDOM.querySelector("p.website span").innerHTML = websiteHTML;
 
       // 4 screenshots
-      
+      const screenshots = ""
 
       // Liens pour acheter le jeu
       const storesHTML = stores.map(gameStore => 
-      `<a href="http://${gameStore.store.domain}" target="_self">${gameStore.store.name}</a>`); //target_blank ouvre l'élément dans une nouvelle fenêtre, self dans la même
+      `<a href="http://${gameStore.store.domain}" target="_blank">${gameStore.store.name}</a>`); //target_blank ouvre l'élément dans une nouvelle fenêtre, self dans la même
       articleDOM.querySelector("p.stores span").innerHTML = storesHTML;
-      console.log(stores)
     };
 
-
+    const fetchScreenshots = (url, argument) => {
+      fetch(`${url}/${argument}?key=${API_KEY}`)
+    }
     
     const fetchGame = (url, argument) => {
       fetch(`${url}/${argument}?key=${API_KEY}`)
@@ -81,10 +82,10 @@ const PageDetail = (argument) => {
   const render = () => {
     pageContent.innerHTML = `
     <article>
-        <div class ="details"> 
+        <div class ="card"> 
       <section class="page-detail">
         <div class="article">
-        <img class="background_image">
+        <img class="game-cover-details background_image">
           <h1 class="title"></h1>
           <p class="release-date">Date sortie : <span></span></p>
           <p class="description"></p>
@@ -99,8 +100,7 @@ const PageDetail = (argument) => {
         </div>
       </section>
       </div>
-      </article>
-    `;
+      </article>`
 
     preparePage();
   };

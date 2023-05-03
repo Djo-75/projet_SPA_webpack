@@ -1,4 +1,5 @@
 $color-purple : purple;
+$color-beige : beige;
 
 
 p {
@@ -11,14 +12,24 @@ p {
     height: 250px;
 }
 
+.game-cover-details {
+    width: 100%;
+    height: auto;
+}
+
 .input-group {
     margin: 0 auto;
     padding: 30px;
     max-width: 30%;
 }
 
+.article, .card-body {
+    background: $color-beige;
+}
+
 body {
-    background-image: url('../assets/images/retro.jpg')
+    background-image: url('../assets/images/retro.jpg');
+    background-size: cover;
 }
 
 .container {
@@ -49,17 +60,13 @@ body {
 
   /* PAGE CONTENT */
   #pageContent {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
     margin-left: 100px;
     margin-right: 100px;
-    gap: 20px
+    gap: 20px;
   }
 
-// .cardGame-container {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//   }
+
   

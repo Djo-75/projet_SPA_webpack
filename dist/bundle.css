@@ -11,14 +11,24 @@ p {
   height: 250px;
 }
 
+.game-cover-details {
+  width: 100%;
+  height: auto;
+}
+
 .input-group {
   margin: 0 auto;
   padding: 30px;
   max-width: 30%;
 }
 
+.article, .card-body {
+  background: beige;
+}
+
 body {
   background-image: url(4ca58273c5794892717b.jpg);
+  background-size: cover;
 }
 
 .container {
@@ -37,8 +47,8 @@ body {
 }
 /* PAGE CONTENT */
 #pageContent {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
   margin-left: 100px;
   margin-right: 100px;
