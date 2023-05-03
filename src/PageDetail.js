@@ -7,18 +7,62 @@ const PageDetail = (argument) => {
     const articleDOM = document.querySelector(".page-detail .article");
 
     const displayGame = (gameData) => {
-      const { name, released, description, rating, background_image, platforms } = gameData;
+      const { name,
+         released,
+         description, 
+         rating, 
+         background_image, 
+         platforms, 
+         genres, 
+         developers,
+         tags,
+         website,
+         ratings_count,
+         stores } = gameData;
       articleDOM.querySelector("h1.title").innerHTML = name;
       articleDOM.querySelector("p.release-date span").innerHTML = released;
       articleDOM.querySelector("p.description").innerHTML = description;
       articleDOM.querySelector("p.rating span").innerHTML = rating;
       articleDOM.querySelector(".background_image").src = background_image;
+      articleDOM.querySelector("p.ratings_count span").innerHTML = ratings_count;
+      console.log(gameData)
   
       // Plateformes 
       const platformsHTML = platforms.map(gamePlatform =>
       `<span class="platform">${gamePlatform.platform.name}</span>`)
       .join(", ");
       articleDOM.querySelector("p.platforms span").innerHTML = platformsHTML;
+
+      // Genres 
+      const genresHTML = genres.map(genresGame =>
+        `<span class="genres">${genresGame.name}</span>`)
+        .join(", ");
+        articleDOM.querySelector("p.genres span").innerHTML = genresHTML;
+
+      // Développeurs 
+      const developersHTML = developers.map(devs =>
+        `<span class="developers">${devs.name}</span>`)
+        .join(", ");
+        articleDOM.querySelector("p.developers span").innerHTML = developersHTML;
+
+      // Tags 
+      const tagsHTML = tags.map(tagsGame =>
+        `<span class="tags">${tagsGame.name}</span>`)
+        .join(", ");
+        articleDOM.querySelector("p.tags span").innerHTML = tagsHTML;
+
+      // Site web
+      const websiteHTML = `<a href="${website}" target="_self">${website}</a>` //target_blank ouvre l'élément dans une nouvelle fenêtre, self dans la même
+      articleDOM.querySelector("p.website span").innerHTML = websiteHTML;
+
+      // 4 screenshots
+      
+
+      // Liens pour acheter le jeu
+      const storesHTML = stores.map(gameStore => 
+      `<a href="http://${gameStore.store.domain}" target="_self">${gameStore.store.name}</a>`); //target_blank ouvre l'élément dans une nouvelle fenêtre, self dans la même
+      articleDOM.querySelector("p.stores span").innerHTML = storesHTML;
+      console.log(stores)
     };
 
 
@@ -45,7 +89,13 @@ const PageDetail = (argument) => {
           <p class="release-date">Date sortie : <span></span></p>
           <p class="description"></p>
           <p class="platforms">Disponible sur : <span></span></p>
-          <p class="rating">Note: <span></span></p>
+          <p class="rating">Note : <span></span></p>
+          <p class="ratings_count">Nombre notes : <span></span></p>
+          <p class="genres">Type jeu : <span></span></p>
+          <p class="developers">Développeurs : <span></span></p>
+          <p class="tags">Tags : <span></span></p>
+          <p class="website">Site officiel : <span></span></p>
+          <p class="stores">Où acheter le jeu : <span></span></p>
         </div>
       </section>
       </div>

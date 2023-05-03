@@ -12,7 +12,6 @@ const PageList = (argument = "") => {
             <h2>${article.name.substring(0, 20)}</h2>
             <p>Date sortie : ${article.released}</p>
             <p>Note : ${article.rating}</p> 
-            <p>Plateforme : ${article.platforms[0].platform.name}</p>
             <p>Genre : ${console.log(article)}</p> 
             <button class="btn btn-dark" onclick="location.href='#'">Accueil</button>
             <button class="btn btn-dark" onclick="location.href='#pagedetail/${article.id}'">En savoir +</button>
